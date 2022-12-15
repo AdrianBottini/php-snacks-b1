@@ -12,9 +12,9 @@
     $mail = $_GET['mail'];
     $age = $_GET['age'];
     if(strlen($name) > 3 && strpos($mail, "@") && strpos($mail, ".") && is_numeric($age)){
-        echo "Accesso Riuscito";
+        $message = "Accesso Riuscito";
     }else{
-        echo "Accesso Negato";
+        $message = "Accesso Negato";
     };
     ?>
 
@@ -26,6 +26,7 @@
      <label for="age">Age</label>
      <input type="text" name="age" id="age">   
      <button>Accedi</button>
+     <h1><?= $message ?></h1>
     </form>
 </body>
 </html>
